@@ -52,6 +52,7 @@ export default {
               email
             }
           })
+          this.$router.push({name: 'dashboard'})
         })
         .catch((error) => {
           var errorCode = error.errorCode;
