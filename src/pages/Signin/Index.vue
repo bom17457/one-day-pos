@@ -3,7 +3,7 @@
     <div class="row">
       <div class="flex flex-center col">
         <q-img
-          style="max-width: calc(100% - 150px)"
+          style="max-width: calc(100% - 200px)"
           src="~assets/img-account.svg"
         />
       </div>
