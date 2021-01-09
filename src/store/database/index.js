@@ -7,6 +7,6 @@ import users from './users'
 import products from './products'
 
 database.register(users)
-// database.register()
+database.register(products)
 
 export default database

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import database from './database'
+import database from './database/index.js'
 import VuexORM from '@vuex-orm/core'
 // import example from './module-example'
 
