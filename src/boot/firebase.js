@@ -1,4 +1,7 @@
-import firebase from 'firebase'
+import Vue from 'vue'
+import firebase from 'firebase/app'
+import 'firebase/auth'
+import 'firebase/database'
 
 const firebaseConfig = {
     apiKey: "AIzaSyDXzPZDZWsqes67U88np-_JpoxeRVWHqkc",
@@ -10,3 +13,7 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig)
+
+Vue.prototype.$firebase = firebase
+Vue.prototype.$firebase.$database = firebase.database();
+Vue.prototype.$firebase.$auth = firebase.auth();
