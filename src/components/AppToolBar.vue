@@ -2,7 +2,7 @@
   <q-toolbar>
     <slot name="prepend" />
     <q-toolbar-title class="text-secondary">
-      Point of sale
+      POS: DEMO
     </q-toolbar-title>
     <slot name="append" />
   </q-toolbar>
