@@ -1,5 +1,6 @@
 <template>
   <q-toolbar>
+    <slot name="prepend" />
     <q-toolbar-title class="text-secondary">
       Point of sale
     </q-toolbar-title>
