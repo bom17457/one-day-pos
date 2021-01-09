@@ -14,7 +14,7 @@
       </app-tool-bar>
     </q-header>
 
-    <q-drawer width="256" bordered behavior="desktop" v-model="navigator" side="left">
+    <q-drawer :width="256" bordered behavior="desktop" v-model="navigator" side="left">
       <q-scroll-area class="fit">
         <q-list padding class="menu-list">
           <q-item :to="{ name: 'dashboard' }" clickable v-ripple>
