@@ -17,3 +17,7 @@ firebase.initializeApp(firebaseConfig)
 Vue.prototype.$firebase = firebase
 Vue.prototype.$firebase.$database = firebase.database();
 Vue.prototype.$firebase.$auth = firebase.auth();
+
+export default ({ app }) => {
+    app.firebase = firebase
+}
