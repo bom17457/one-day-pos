@@ -1,5 +1,5 @@
 import { Model } from "@vuex-orm/core";
-
+import { v4 as uuid } from 'uuid'
 export default class products extends Model {
   static entity = "products";
 
@@ -12,14 +12,14 @@ export default class products extends Model {
   }
   static fields() {
     return {
-      product_id: this.uid(),
+      product_id: this.uid(() => uuid()),
       product_name: this.string(),
       description: this.string(),
       unit_price: this.number(),
       unit_cost: this.number(),
       quantity: this.number(),
-      inventory_value: this.number(),
-      discount: this.number(),
+      inventory_value: this.number(0),
+      discount: this.number(0),
     };
   }
 

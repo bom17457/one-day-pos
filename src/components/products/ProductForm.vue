@@ -80,7 +80,7 @@
         </div>
         <div class="row justify-start q-gutter-md">
           <q-btn no-caps color="positive" @click="create">Save</q-btn>
-          <q-btn no-caps color="negative" @click="remove" >Delete</q-btn>
+          <q-btn no-caps color="negative" @click="remove" >Reset</q-btn>
         </div>
       </q-form>
     </q-card-section>
@@ -105,10 +105,11 @@ export default {
   },
   methods: {
     create() {
+      this.$firebase.$firestore.collection('products').doc('test').set(this.product.$toJson())
       this.product.$save()
     },
     remove() {
-      this.product.$delete()
+      this.product = new product()
     }
   }
 };
