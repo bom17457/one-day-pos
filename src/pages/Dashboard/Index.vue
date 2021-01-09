@@ -2,7 +2,7 @@
   <q-page padding>
     <div class="column">
       <div class="col">
-        <data-table title="Sell History">
+        <data-table style="height: 520px"  title="Sell History">
           <template v-slot:no-data>
             No Sell Data
           </template>
@@ -10,13 +10,9 @@
       </div>
     </div>
     <div class="col q-pt-md">
-      <data-table  title="All Products" :columns="products_column" :data="products">
+      <data-table style="height: 520px" title="All Products" :columns="products_column" :data="products">
         <template v-slot:no-data>
           No Product Data
-        </template>
-
-        <template v-slot:top-left="s">
-          {{s}}
         </template>
       </data-table>
     </div>
