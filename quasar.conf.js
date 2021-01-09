@@ -74,6 +74,7 @@ cfg.module.rules.push({
           loader: 'eslint-loader',
           exclude: /node_modules/
         })
+        cfg.resolve.alias['models'] = require('path').resolve(__dirname, './src/store/database')
       },
     },
 
