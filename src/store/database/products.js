@@ -22,4 +22,125 @@ export default class products extends Model {
       discount: this.number(),
     };
   }
+
+  static getSampleData() {
+    return products.insert({
+      data: [
+        {
+          product_id: "EFG52212",
+          product_name: "ปลอกแฮน",
+          description: "this.string()",
+          unit_price: 30,
+          unit_cost: 30,
+          quantity: 25,
+          inventory_value: 30,
+          discount: 30
+        },
+        {
+          product_id: "21G52213",
+          product_name: "ปลอกแฮน",
+          description: "this.string()",
+          unit_price: 30,
+          unit_cost: 30,
+          quantity: 25,
+          inventory_value: 30,
+          discount: 30
+        },
+        {
+          product_id: "EFG53214",
+          product_name: "ปลอกแฮน",
+          description: "this.string()",
+          unit_price: 30,
+          unit_cost: 30,
+          quantity: 25,
+          inventory_value: 30,
+          discount: 30
+        },
+      ]
+    });
+  }
+
+  static getColumns() {
+    return [
+      {
+        name: "product_id",
+        required: true,
+        label: "Product ID (รหัสสินค้า)",
+        align: "left",
+        field: row => row.product_id,
+        format: val => `${val}`,
+        classes: 'text-weight-bold',
+        sortable: true
+      },
+      {
+        name: "product_name",
+        required: true,
+        label: "Product name (ชื่อสินค้า)",
+        align: "left",
+        field: row => row.product_name,
+        format: val => `${val}`,
+        classes: '',
+        sortable: true
+      },
+      {
+        name: "description",
+        required: true,
+        label: "Description",
+        align: "left",
+        field: row => row.description,
+        format: val => `${val}`,
+        classes: '',
+        sortable: true
+      },
+      {
+        name: "unit_price",
+        required: true,
+        label: "Unit Price (ราคาขายต่อหน่วย)",
+        align: "left",
+        field: row => row.unit_price,
+        format: val => `${val}`,
+        classes: '',
+        sortable: true
+      },
+      {
+        name: "unit_cost",
+        required: true,
+        label: "Cost Price (ราคาทุน)",
+        align: "left",
+        field: row => row.unit_cost,
+        format: val => `${val}`,
+        classes: '',
+        sortable: true,        },
+      {
+        name: "quantity",
+        required: true,
+        label: "Quantity (จำนวน)",
+        align: "left",
+        field: row => row.quantity,
+        format: val => `${val}`,
+        classes: '',
+        sortable: true
+      },
+      {
+        name: "inventory_value",
+        required: true,
+        label: "Inventory Value (มูลค่าสินค้าคงคลัง)",
+        align: "left",
+        field: row => row.inventory_value,
+        format: (val, row) => `${row.quantity * row.unit_cost}`,
+        classes: '',
+        sortable: true
+      },
+      {
+        name: "discount",
+        required: true,
+        label: "Discount (ส่วนลด)",
+        align: "left",
+        field: row => row.discount,
+        format: val => `${val}%`,
+        classes: '',
+        sortable: true
+      }
+    ]
+  }
 }
