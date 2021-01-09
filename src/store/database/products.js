@@ -23,43 +23,6 @@ export default class products extends Model {
     };
   }
 
-  static getSampleData() {
-    return products.insert({
-      data: [
-        {
-          product_id: "EFG52212",
-          product_name: "ปลอกแฮน",
-          description: "this.string()",
-          unit_price: 30,
-          unit_cost: 30,
-          quantity: 25,
-          inventory_value: 30,
-          discount: 30
-        },
-        {
-          product_id: "21G52213",
-          product_name: "ปลอกแฮน",
-          description: "this.string()",
-          unit_price: 30,
-          unit_cost: 30,
-          quantity: 25,
-          inventory_value: 30,
-          discount: 30
-        },
-        {
-          product_id: "EFG53214",
-          product_name: "ปลอกแฮน",
-          description: "this.string()",
-          unit_price: 30,
-          unit_cost: 30,
-          quantity: 25,
-          inventory_value: 30,
-          discount: 30
-        },
-      ]
-    });
-  }
-
   static getColumns() {
     return [
       {
