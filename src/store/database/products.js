@@ -15,10 +15,10 @@ export default class products extends Model {
       product_id: this.uid(),
       product_name: this.string(),
       description: this.string(),
-      price_per_unit: this.number(),
-      cost_per_unit: this.number(),
+      unit_price: this.number(),
+      unit_cost: this.number(),
       quantity: this.number(),
-      value_cost: this.number(),
+      inventory_value: this.number(),
       discount: this.number(),
     };
   }
