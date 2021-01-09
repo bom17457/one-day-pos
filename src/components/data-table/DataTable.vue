@@ -7,9 +7,9 @@
     color="primary"
     bordered
     dense
-    class="full-height"
   >
     <slot name="no-data" slot="no-data" />
+    <slot name="top" slot="top" />
     <slot name="top-left" slot="top-left" />
     <slot name="top-right" slot="top-right" />
   </q-table>
