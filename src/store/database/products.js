@@ -1,7 +1,7 @@
 import { Model } from "@vuex-orm/core";
 
 export default class products extends Model {
-  static entity = "users";
+  static entity = "products";
 
   static primaryKey = 'product_id';
 
